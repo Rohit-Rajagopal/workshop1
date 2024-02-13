@@ -1,0 +1,638 @@
+
+C:\Users\Acer>d:
+
+D:\>cd cs133/expr 8
+
+D:\cs133\expr 8>git init
+Reinitialized existing Git repository in D:/cs133/expr 8/.git/
+
+D:\cs133\expr 8>f1.txt
+
+D:\cs133\expr 8>git add .
+
+D:\cs133\expr 8>git commit -m "First commit"
+[master e9dbf59] First commit
+ 1 file changed, 2 deletions(-)
+
+D:\cs133\expr 8>f1.txt
+
+D:\cs133\expr 8>git add .
+
+D:\cs133\expr 8>git commit -m "Second commit"
+[master cb2d3b1] Second commit
+ 1 file changed, 1 insertion(+)
+
+D:\cs133\expr 8>f1.txt
+
+D:\cs133\expr 8>git add .
+
+D:\cs133\expr 8>git commit -m "Third commit"
+[master 8d390ad] Third commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+D:\cs133\expr 8>f1.txt
+
+D:\cs133\expr 8>git add .
+
+D:\cs133\expr 8>git commit -m "Fourth commit"
+[master 93bf2b2] Fourth commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+D:\cs133\expr 8>f1.txt
+
+D:\cs133\expr 8>git add .
+
+D:\cs133\expr 8>git commit -m "Fifth commit"
+[master 56bf3a6] Fifth commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+D:\cs133\expr 8>git log -n 5
+commit 56bf3a630c4e2f24b390f7909ea026725f114931 (HEAD -> master)
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:35:45 2024 +0530
+
+    Fifth commit
+
+commit 93bf2b228149dcfe678ac70337215d1093f19d84
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:35:10 2024 +0530
+
+    Fourth commit
+
+commit 8d390ad4a0a01a54ea12c6ab60797a83c9ada80d
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:34:35 2024 +0530
+
+    Third commit
+
+commit cb2d3b110a57afbee98373a357e968836e69d3d1
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:34:07 2024 +0530
+
+    Second commit
+
+commit e9dbf59394dec42422b210b53d3831da3958109b
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:33:40 2024 +0530
+
+    First commit
+
+D:\cs133\expr 8>
+D:\cs133\expr 8>git revert 56bf3a630c4e2f24b390f7909ea026725f114931
+[master 46de3a7] Revert "Fifth commit"
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+D:\cs133\expr 8>git log
+commit 46de3a78427ae2dddc2f85ebe98e1e316bc4b6ab (HEAD -> master)
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:37:13 2024 +0530
+
+    Revert "Fifth commit"
+
+    This reverts commit 56bf3a630c4e2f24b390f7909ea026725f114931.
+
+commit 56bf3a630c4e2f24b390f7909ea026725f114931
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:35:45 2024 +0530
+
+    Fifth commit
+
+commit 93bf2b228149dcfe678ac70337215d1093f19d84
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:35:10 2024 +0530
+
+    Fourth commit
+
+commit 8d390ad4a0a01a54ea12c6ab60797a83c9ada80d
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:34:35 2024 +0530
+
+    Third commit
+
+commit cb2d3b110a57afbee98373a357e968836e69d3d1
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:34:07 2024 +0530
+
+D:\cs133\expr 8>
+D:\cs133\expr 8>git checkout master
+Already on 'master'
+
+D:\cs133\expr 8>git checkout -b feature
+Switched to a new branch 'feature'
+
+D:\cs133\expr 8>f1.txt
+
+D:\cs133\expr 8>git cherry-pick 1^..5
+fatal: bad revision '1..5'
+
+D:\cs133\expr 8>f1.txt
+
+D:\cs133\expr 8>git add .
+
+D:\cs133\expr 8>git commit -m "feature commit 1"
+On branch feature
+nothing to commit, working tree clean
+
+D:\cs133\expr 8>f1.txt
+
+D:\cs133\expr 8>git add .
+
+D:\cs133\expr 8>git commit -m "feature commit 1"
+[feature 363aec4] feature commit 1
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+D:\cs133\expr 8>f1.txt
+
+D:\cs133\expr 8>git add .
+
+D:\cs133\expr 8>git commit -m "feature commit 2"
+[feature 63bfc67] feature commit 2
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+D:\cs133\expr 8>f1.txt
+
+D:\cs133\expr 8>git add .
+
+D:\cs133\expr 8>git commit -m "feature commit 3"
+[feature 297dde5] feature commit 3
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+D:\cs133\expr 8>f1.txt
+
+D:\cs133\expr 8>git add .
+
+D:\cs133\expr 8>git commit -m "feature commit 4"
+[feature e14562b] feature commit 4
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+D:\cs133\expr 8>f1.txt
+
+D:\cs133\expr 8>git add .
+
+D:\cs133\expr 8>git commit -m "feature commit 5"
+[feature 781078d] feature commit 5
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+D:\cs133\expr 8>f1.txt\
+'f1.txt\' is not recognized as an internal or external command,
+operable program or batch file.
+
+D:\cs133\expr 8>f1.txt
+
+D:\cs133\expr 8>git add .
+
+D:\cs133\expr 8>git commit -m "feature commit 6"
+[feature 7bd31d7] feature commit 6
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+D:\cs133\expr 8>f1.txt
+
+D:\cs133\expr 8>git add .
+
+D:\cs133\expr 8>git commit -m "feature commit 7"
+[feature 616a5e2] feature commit 7
+ 1 file changed, 1 insertion(+)
+
+D:\cs133\expr 8>f1.txt
+
+D:\cs133\expr 8>git add .
+
+D:\cs133\expr 8>git commit -m "feature commit 8"
+[feature 62b1d97] feature commit 8
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+D:\cs133\expr 8>git checkout -m target
+error: pathspec 'target' did not match any file(s) known to git
+
+D:\cs133\expr 8>git checkout -b target
+Switched to a new branch 'target'
+
+D:\cs133\expr 8>git log
+commit 62b1d9719242384adcda8613ef5023fadd00f76c (HEAD -> target, feature)
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:49:25 2024 +0530
+
+    feature commit 8
+
+commit 616a5e28c7999cbb4bd49e821e1a0c56cc00cc61
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:48:45 2024 +0530
+
+    feature commit 7
+
+commit 7bd31d767a8721dadb1d29f380f9c0571fb711a2
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:48:22 2024 +0530
+
+    feature commit 6
+
+commit 781078d42baa7f7d36212e61b1f6a4901262ebcf
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:47:54 2024 +0530
+
+    feature commit 5
+
+commit e14562bf2bb29b8066c903ac7b1e78ea63dad567
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:47:24 2024 +0530
+
+    feature commit 4
+
+
+D:\cs133\expr 8>
+D:\cs133\expr 8>git cherry_pick e14562bf2bb29b8066c903ac7b1e78ea63dad567^..62b1d9719242384adcda8613ef5023fadd00f76c
+git: 'cherry_pick' is not a git command. See 'git --help'.
+
+The most similar command is
+        cherry-pick
+
+D:\cs133\expr 8>git cherry-pick e14562bf2bb29b8066c903ac7b1e78ea63dad567^..62b1d9719242384adcda8613ef5023fadd00f76c
+Auto-merging f1.txt
+CONFLICT (content): Merge conflict in f1.txt
+error: could not apply 781078d... feature commit 5
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+
+D:\cs133\expr 8>f1.txt
+
+D:\cs133\expr 8>git cherry-pick --abort
+
+D:\cs133\expr 8>git cherry-pick e14562bf2bb29b8066c903ac7b1e78ea63dad567^..62b1d9719242384adcda8613ef5023fadd00f76c
+Auto-merging f1.txt
+CONFLICT (content): Merge conflict in f1.txt
+error: could not apply 781078d... feature commit 5
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+
+D:\cs133\expr 8>git cherry-pick --abort
+
+D:\cs133\expr 8>git cherry-pick e14562bf2bb29b8066c903ac7b1e78ea63dad567^ .. 62b1d9719242384adcda8613ef5023fadd00f76c
+error: empty commit set passed
+fatal: cherry-pick failed
+
+D:\cs133\expr 8>git cherry-pick e14562bf2bb29b8066c903ac7b1e78ea63dad567^..62b1d9719242384adcda8613ef5023fadd00f76c
+Auto-merging f1.txt
+CONFLICT (content): Merge conflict in f1.txt
+error: could not apply 781078d... feature commit 5
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+
+D:\cs133\expr 8>f1.txt
+
+D:\cs133\expr 8>git cherry-pick --continue
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+U       f1.txt
+
+D:\cs133\expr 8>git add f1.txt
+
+D:\cs133\expr 8>git cherry-pick --continue
+[target f8b393c] feature commit 5
+ Date: Tue Feb 13 11:47:54 2024 +0530
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Auto-merging f1.txt
+CONFLICT (content): Merge conflict in f1.txt
+error: could not apply 7bd31d7... feature commit 6
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+
+D:\cs133\expr 8>f1.txt
+
+D:\cs133\expr 8>git cherry-pick --abort
+
+D:\cs133\expr 8>git log
+commit 62b1d9719242384adcda8613ef5023fadd00f76c (HEAD -> target, feature)
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:49:25 2024 +0530
+
+    feature commit 8
+
+commit 616a5e28c7999cbb4bd49e821e1a0c56cc00cc61
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:48:45 2024 +0530
+
+    feature commit 7
+
+commit 7bd31d767a8721dadb1d29f380f9c0571fb711a2
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:48:22 2024 +0530
+
+    feature commit 6
+
+commit 781078d42baa7f7d36212e61b1f6a4901262ebcf
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:47:54 2024 +0530
+
+    feature commit 5
+
+commit e14562bf2bb29b8066c903ac7b1e78ea63dad567
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:47:24 2024 +0530
+
+    feature commit 4
+
+commit 297dde53529b23d2e6b1c79d22723bb30987b7df
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:47:02 2024 +0530
+
+    feature commit 3
+
+commit 63bfc67c96379fbe0b7f17dd6d2c2218aa508a66
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:46:42 2024 +0530
+
+    feature commit 2
+
+commit 363aec4b7baacb0ec242054f3038f09c5ac40a22
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:46:14 2024 +0530
+
+    feature commit 1
+
+commit 46de3a78427ae2dddc2f85ebe98e1e316bc4b6ab (master)
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:37:13 2024 +0530
+
+    Revert "Fifth commit"
+
+    This reverts commit 56bf3a630c4e2f24b390f7909ea026725f114931.
+
+commit 56bf3a630c4e2f24b390f7909ea026725f114931
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:35:45 2024 +0530
+
+    Fifth commit
+
+commit 93bf2b228149dcfe678ac70337215d1093f19d84
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:35:10 2024 +0530
+
+    Fourth commit
+
+commit 8d390ad4a0a01a54ea12c6ab60797a83c9ada80d
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:34:35 2024 +0530
+
+    Third commit
+
+commit cb2d3b110a57afbee98373a357e968836e69d3d1
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:34:07 2024 +0530
+
+    Second commit
+
+commit e9dbf59394dec42422b210b53d3831da3958109b
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:33:40 2024 +0530
+
+    First commit
+
+commit 95a74835c048355beebf2a397dffd4b16a2a4b68
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:32:40 2024 +0530
+
+    Second commit
+
+commit 06ac34964cd345501afcde04708b4232eaed8652
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:32:22 2024 +0530
+
+    Second commit
+
+commit e08fc6040fc31f0979e49ae856dc462e6f698f04
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:31:50 2024 +0530
+
+    First commit
+
+D:\cs133\expr 8>git checkout target
+Already on 'target'
+
+D:\cs133\expr 8>git cherry-pick 62b1d9719242384adcda8613ef5023fadd00f76c ^.. 616a5e28c7999cbb4bd49e821e1a0c56cc00cc61
+error: empty commit set passed
+fatal: cherry-pick failed
+
+D:\cs133\expr 8>git cherry-pick 62b1d9719242384adcda8613ef5023fadd00f76c ^.. 7bd31d767a8721dadb1d29f380f9c0571fb711a2
+error: empty commit set passed
+fatal: cherry-pick failed
+
+D:\cs133\expr 8>git cherry-pick 62b1d9719242384adcda8613ef5023fadd00f76c^..7bd31d767a8721dadb1d29f380f9c0571fb711a2
+error: empty commit set passed
+fatal: cherry-pick failed
+
+D:\cs133\expr 8>git cherry-pick 62b1d9719242384adcda8613ef5023fadd00f76c^..781078d42baa7f7d36212e61b1f6a4901262ebcf
+error: empty commit set passed
+fatal: cherry-pick failed
+
+D:\cs133\expr 8>git checkout -b feature 2
+fatal: '2' is not a commit and a branch 'feature' cannot be created from it
+
+D:\cs133\expr 8>git checkout -b feature2
+Switched to a new branch 'feature2'
+
+D:\cs133\expr 8>f1.txt
+
+D:\cs133\expr 8>git commit -m "commit 1"
+On branch feature2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   f1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\cs133\expr 8>git add .
+
+D:\cs133\expr 8>git commit -m "commit 1"
+[feature2 a94227a] commit 1
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+D:\cs133\expr 8>f1.txtr
+'f1.txtr' is not recognized as an internal or external command,
+operable program or batch file.
+
+D:\cs133\expr 8>f1.txt
+
+D:\cs133\expr 8>git add .
+
+D:\cs133\expr 8>git commit -m "commit 2"
+[feature2 9fab489] commit 2
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+D:\cs133\expr 8>git checkout target
+Switched to branch 'target'
+
+D:\cs133\expr 8>git log
+commit 62b1d9719242384adcda8613ef5023fadd00f76c (HEAD -> target, feature)
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:49:25 2024 +0530
+
+    feature commit 8
+
+commit 616a5e28c7999cbb4bd49e821e1a0c56cc00cc61
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:48:45 2024 +0530
+
+    feature commit 7
+
+commit 7bd31d767a8721dadb1d29f380f9c0571fb711a2
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:48:22 2024 +0530
+
+    feature commit 6
+
+commit 781078d42baa7f7d36212e61b1f6a4901262ebcf
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:47:54 2024 +0530
+
+    feature commit 5
+
+commit e14562bf2bb29b8066c903ac7b1e78ea63dad567
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:47:24 2024 +0530
+
+    feature commit 4
+
+commit 297dde53529b23d2e6b1c79d22723bb30987b7df
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:47:02 2024 +0530
+
+    feature commit 3
+
+commit 63bfc67c96379fbe0b7f17dd6d2c2218aa508a66
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:46:42 2024 +0530
+
+    feature commit 2
+
+commit 363aec4b7baacb0ec242054f3038f09c5ac40a22
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:46:14 2024 +0530
+
+    feature commit 1
+
+commit 46de3a78427ae2dddc2f85ebe98e1e316bc4b6ab (master)
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:37:13 2024 +0530
+
+    Revert "Fifth commit"
+
+    This reverts commit 56bf3a630c4e2f24b390f7909ea026725f114931.
+
+commit 56bf3a630c4e2f24b390f7909ea026725f114931
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:35:45 2024 +0530
+
+    Fifth commit
+
+commit 93bf2b228149dcfe678ac70337215d1093f19d84
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:35:10 2024 +0530
+
+    Fourth commit
+
+commit 8d390ad4a0a01a54ea12c6ab60797a83c9ada80d
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:34:35 2024 +0530
+
+    Third commit
+
+commit cb2d3b110a57afbee98373a357e968836e69d3d1
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:34:07 2024 +0530
+
+    Second commit
+
+commit e9dbf59394dec42422b210b53d3831da3958109b
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:33:40 2024 +0530
+
+    First commit
+
+commit 95a74835c048355beebf2a397dffd4b16a2a4b68
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:32:40 2024 +0530
+
+    Second commit
+
+commit 06ac34964cd345501afcde04708b4232eaed8652
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:32:22 2024 +0530
+
+    Second commit
+
+commit e08fc6040fc31f0979e49ae856dc462e6f698f04
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:31:50 2024 +0530
+
+    First commit
+
+D:\cs133\expr 8>git checkout feature 2
+error: pathspec '2' did not match any file(s) known to git
+
+D:\cs133\expr 8>git checkout feature2
+Switched to branch 'feature2'
+
+D:\cs133\expr 8>git log
+commit 9fab4899f792d7f1cff5aeb82d2d52c1ba67da94 (HEAD -> feature2)
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 12:35:24 2024 +0530
+
+    commit 2
+
+commit a94227a02b3a622410a628ade9de093e641a71aa
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 12:34:52 2024 +0530
+
+    commit 1
+
+commit 62b1d9719242384adcda8613ef5023fadd00f76c (target, feature)
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:49:25 2024 +0530
+
+    feature commit 8
+
+commit 616a5e28c7999cbb4bd49e821e1a0c56cc00cc61
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:48:45 2024 +0530
+
+    feature commit 7
+
+commit 7bd31d767a8721dadb1d29f380f9c0571fb711a2
+Author: Rohit Rajagopal <rohitrajagopal04@gmail.com>
+Date:   Tue Feb 13 11:48:22 2024 +0530
+
+    feature commit 6
+
+D:\cs133\expr 8>git checkout target
+Switched to branch 'target'
+
+D:\cs133\expr 8>git cherry-pick 9fab4899f792d7f1cff5aeb82d2d52c1ba67da94^..a94227a02b3a622410a628ade9de093e641a71aa
+error: empty commit set passed
+fatal: cherry-pick failed
+
+D:\cs133\expr 8>git cherry-pick 9fab4899f792d7f1cff5aeb82d2d52c1ba67da94 ^.. a94227a02b3a622410a628ade9de093e641a71aa
+[target 708f022] commit 1
+ Date: Tue Feb 13 12:34:52 2024 +0530
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+[target 72dd1d4] commit 2
+ Date: Tue Feb 13 12:35:24 2024 +0530
+ 1 file changed, 2 insertions(+), 1 deletion(-)
